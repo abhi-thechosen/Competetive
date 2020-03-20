@@ -1,0 +1,53 @@
+// y
+#include <iostream>
+#include<vector>
+using namespace std;
+
+void run1()
+{
+    int size;
+    int elem;
+    int max;
+    cout<<"Enter size of array";
+    cin>>size;
+    vector<int> arr;
+    for(int i=0;i<size;i++)
+    {
+        cout<<"ENter element";
+        cin>>elem;
+        arr.push_back(elem);
+    }
+    cout<<"\n\n\n";
+    
+    for(int i=0;i<size-1;i++)
+    {
+     max=arr[i+1];   
+        for(int j=i+2;j<size;j++)
+        {
+         if(arr[j]>max)
+            max=arr[j];
+        }
+        arr[i]=max;
+    }
+    arr[size-1]=-1;
+    
+      cout<<"\n\n\n\n";
+    for(int i=0;i<size;i++)
+    {
+        cout<<arr[i]<<"\n";
+    }
+  
+     
+}
+int main()
+{
+	int caseno;
+	cout<<"Enter no of test cases";
+	cin>>caseno;
+	for(int i=0;i<caseno;i++)
+	{
+		run1();
+	}
+	return 0;
+}
+
