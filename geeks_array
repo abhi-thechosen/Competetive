@@ -1,4 +1,5 @@
-// y
+// In this create array then replace evry element with the max element present to its right excluding itself.
+//Geeks problem Array
 #include <iostream>
 #include<vector>
 using namespace std;
